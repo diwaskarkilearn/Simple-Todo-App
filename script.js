@@ -7,5 +7,12 @@ btn.addEventListener("click",function(event){
     item.innerText=input.value;
     input.value="";
     ul.appendChild(item);
+    let del=document.createElement("button");
+    del.innerText="Delete";
+    item.appendChild(del);
+
+    del.addEventListener("click",function(e){
+        item.remove();
+    })
 
 });
